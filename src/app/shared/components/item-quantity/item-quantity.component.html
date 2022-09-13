@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>items-quantity</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+    </head>
+    <body>
+        <button mat-stroked-button  [disabled]="disabled">{{quantity}}
+            <mat-icon *ngIf="!disabled">expand_more</mat-icon></button>
+        
+            <mat-menu #menu="matMenu">
+              <button *ngFor="let no of values" (click)="setQuantity(no)" mat-menu-item>{{no}}</button>
+            </mat-menu>
+
+    </body>
+</html>
